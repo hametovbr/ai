@@ -1,0 +1,14 @@
+interface:
+  display_name: Gather Architecture Context
+  short_description: Evidence-first context before system design
+  default_prompt: Use $gathering-architecture-context to establish the facts, constraints,
+    and open decisions before designing this system.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

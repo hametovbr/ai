@@ -1,0 +1,14 @@
+interface:
+  display_name: Pragmatic Architecture Design
+  short_description: Context-first, operations-led system design
+  default_prompt: Use $making-pragmatic-architecture-decisions to design the smallest
+    complete architecture for this problem.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
