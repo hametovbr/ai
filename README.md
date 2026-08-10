@@ -6,10 +6,10 @@
 
 | Навык | Статус | Назначение |
 |---|---|---|
-| [making-pragmatic-architecture-decisions](skills/making-pragmatic-architecture-decisions/SKILL.md) | Активен | Выбор, проектирование, ревью и упрощение программной и системной архитектуры: интеграции, миграции, развёртывание, границы автоматизации и решения build-versus-buy. |
+| [making-pragmatic-architecture-decisions](skills/making-pragmatic-architecture-decisions/SKILL.md) | Активен | Выбор и пересмотр границ программной системы: размещение поведения и состояния, конфигурация или код, форма расширения, интеграция, развёртывание, миграция, владение и build-versus-buy. |
 | [fileflows-flow-authoring](skills/fileflows-flow-authoring/SKILL.md) | Активен | Создание и проверка импортируемых FileFlows flow JSON, подбор узлов, JavaScript/C#-логика, FFmpeg, Docker-пути и интеграция с Sonarr/Radarr. |
-| [gathering-architecture-context](skills/gathering-architecture-context/SKILL.md) | Активен | Сбор и проверка требований, текущего поведения системы, нативных возможностей, аналогов и эксплуатационных ограничений перед архитектурным решением. |
-| [challenging-architecture-decisions](skills/challenging-architecture-decisions/SKILL.md) | Активен | Независимый стресс-тест архитектуры, ADR, интеграции, миграции, выбора платформы или плана реализации до утверждения. |
+| [gathering-architecture-context](skills/gathering-architecture-context/SKILL.md) | Активен | Сбор и проверка недостающих, спорных или устаревших фактов о текущей системе перед решениями, влияющими на границы, сохранность данных, внешние контракты, миграцию, развёртывание или восстановление. |
+| [challenging-architecture-decisions](skills/challenging-architecture-decisions/SKILL.md) | Активен | Стресс-тест готового архитектурного решения на переусложнение, неподтверждённые предположения, лишние компоненты, риски жизненного цикла и готовность к реализации. |
 
 ## Структура
 

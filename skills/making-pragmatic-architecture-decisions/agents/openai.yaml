@@ -1,8 +1,8 @@
 interface:
   display_name: Pragmatic Architecture Design
-  short_description: Context-first, operations-led system design
-  default_prompt: Use $making-pragmatic-architecture-decisions to design the smallest
-    complete architecture for this problem.
+  short_description: Minimal software-boundary decisions
+  default_prompt: Use $making-pragmatic-architecture-decisions to choose the smallest
+    sufficient system boundary for this problem.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:

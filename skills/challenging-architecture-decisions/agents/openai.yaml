@@ -1,8 +1,8 @@
 interface:
   display_name: Challenge Architecture Decisions
-  short_description: Adversarial lifecycle review before build
-  default_prompt: Use $challenging-architecture-decisions to stress-test this architecture
-    before implementation.
+  short_description: Focused review for overengineered designs
+  default_prompt: Use $challenging-architecture-decisions to find unsupported complexity
+    in this proposed architecture.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:

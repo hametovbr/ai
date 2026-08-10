@@ -1,8 +1,8 @@
 interface:
   display_name: Gather Architecture Context
-  short_description: Evidence-first context before system design
-  default_prompt: Use $gathering-architecture-context to establish the facts, constraints,
-    and open decisions before designing this system.
+  short_description: Decisive facts for blocked architecture choices
+  default_prompt: Use $gathering-architecture-context to verify only the facts that
+    can change this architecture decision.
   icon_small: assets/icon.svg
   icon_large: assets/icon.svg
 policy:
