@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Sub-workflows (Official)
+  short_description: Design reusable n8n sub-workflows
+  default_prompt: Use $n8n-subworkflows-official to extract and design reusable n8n
+    sub-workflows.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

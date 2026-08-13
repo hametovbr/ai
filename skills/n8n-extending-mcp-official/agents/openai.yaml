@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n MCP Extensions (Official)
+  short_description: Extend missing n8n MCP capabilities
+  default_prompt: Use $n8n-extending-mcp-official when the official n8n MCP lacks
+    a required operation.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

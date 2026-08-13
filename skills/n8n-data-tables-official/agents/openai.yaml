@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Data Tables (Official)
+  short_description: Design persistent n8n Data Tables
+  default_prompt: Use $n8n-data-tables-official to design and validate this Data Table
+    workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

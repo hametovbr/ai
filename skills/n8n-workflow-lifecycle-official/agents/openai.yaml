@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Workflow Lifecycle (Official)
+  short_description: Design, test, and publish workflows
+  default_prompt: Use $n8n-workflow-lifecycle-official to design, validate, test,
+    and publish this workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

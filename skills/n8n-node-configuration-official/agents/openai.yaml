@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Node Configuration (Official)
+  short_description: Configure n8n nodes correctly
+  default_prompt: Use $n8n-node-configuration-official to configure and verify these
+    n8n nodes.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

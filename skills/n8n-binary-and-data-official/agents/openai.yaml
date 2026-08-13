@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Binary Data (Official)
+  short_description: Handle files and binary data safely
+  default_prompt: Use $n8n-binary-and-data-official to design the binary-data path
+    for this workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

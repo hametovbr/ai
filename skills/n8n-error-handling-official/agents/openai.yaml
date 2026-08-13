@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Error Handling (Official)
+  short_description: Build resilient error handling
+  default_prompt: Use $n8n-error-handling-official to add production-safe error handling
+    to this workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
