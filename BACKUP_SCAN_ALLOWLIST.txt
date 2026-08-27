@@ -1,0 +1,18 @@
+skills/find-docs/SKILL.md:140:export CONTEXT7_API_KEY=your_key
+skills/n8n-workflow-patterns/database_operations.md:534:  password: "pass",
+skills/n8n-workflow-patterns/database_operations.md:604:CREATE USER n8n_workflow WITH PASSWORD 'secure_password';
+skills/n8n-workflow-patterns/database_operations.md:642:const key = Buffer.from($credentials.encryptionKey, 'hex');
+skills/n8n-workflow-patterns/http_api_integration.md:173:    value: "Bearer YOUR_TOKEN"
+skills/n8n-workflow-patterns/http_api_integration.md:192:    "X-API-Key": "={{$credentials.apiKey}}"
+skills/n8n-workflow-patterns/http_api_integration.md:202:    "api_key": "={{$credentials.apiKey}}"
+skills/n8n-workflow-patterns/http_api_integration.md:631:  "Authorization": "Bearer sk-abc123xyz"  // ❌ Exposed!
+skills/n8n-workflow-patterns/webhook_processing.md:127:const secret = $credentials.stripeWebhookSecret;
+skills/n8n-workflow-patterns/webhook_processing.md:211:    "token": "abc"  // From URL: /webhook/form?token=abc
+skills/n8n-workflow-patterns/webhook_processing.md:225:{{$json.headers['x-api-key']}}
+skills/n8n-workflow-patterns/webhook_processing.md:231:{{$json.query.token}}
+skills/n8n-workflow-patterns/webhook_processing.md:248:{{$json.query.token}} equals "your-secret-token"
+skills/n8n-workflow-patterns/webhook_processing.md:255:{{$json.headers['x-api-key']}} equals "your-api-key"
+skills/n8n-workflow-patterns/webhook_processing.md:264:const secret = $credentials.webhookSecret;
+skills/ru-text/references/addenda.md:1075:`~/.claude/plans/ru-text-v2/comma-dash-research.md`.
+skills/ru-text/references/addenda.md:1161:`~/Projects/_scratch/ru-text-flattening/inventory-15-registers.md`: the longest uppercase run in
+skills/supabase-postgres-best-practices/references/security-privileges.md:42:create role app_user login password 'xxx';

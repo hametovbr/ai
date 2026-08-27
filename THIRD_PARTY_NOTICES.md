@@ -1,0 +1,29 @@
+# Third-party notices
+
+All listed skill trees were **copied unchanged**. Installed/source evidence is
+evidence of the installed material; the separately named license-evidence
+revision only pins the public license or NOTICE bytes.
+
+| Skills | Public source | Installed/source evidence | License evidence and rationale | Included artifact and SHA-256 | NOTICE result |
+|---|---|---|---|---|---|
+| architecture-decision-records | https://github.com/wshobson/agents | installed folder hash `75227f18c39b855d72a328e3c4b5abc74144a4aa` | MIT repository license; license-evidence revision `38e19c20d2b154510b0e624a2e3e186b19b5c527` | `third_party_licenses/wshobson--agents/LICENSE` — `f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746` | six variants absent |
+| code-review | https://github.com/anthropics/knowledge-work-plugins | source commit `be1e436401efdaf12e523d8aa8218619b3b4748c`; installed folder hash `434f3ffc700ca7a6fe937bc72d11ddc180fc81c0` | Apache-2.0 repository license; license-evidence revision `be1e436401efdaf12e523d8aa8218619b3b4748c` | `third_party_licenses/anthropics--knowledge-work-plugins/LICENSE` — `a6946284993aeec75c7d75906064b66210c46051e562077efb30eb6dcfe72e26` | six variants absent |
+| create-rfc | https://github.com/tech-leads-club/agent-skills | installed folder hash `c4762bf5ded3d598d69f433731066da7faab5515` | copied frontmatter declares CC-BY-4.0; repository metadata is NOASSERTION; official version 4.0 text | `third_party_licenses/tech-leads-club--agent-skills/CC-BY-4.0.txt` — `9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411` | not applicable |
+| database-schema-designer | https://github.com/softaworks/agent-toolkit | installed folder hash `aaedacc8d3da73b0bbc02f75dc22d2854371c3dd` | MIT repository license and copied frontmatter; license-evidence revision `3027f20f3181758385a1bb8c022d4041dfb4de84` | `third_party_licenses/softaworks--agent-toolkit/LICENSE` — `4b4447da5344f8b2d3a8a19ba8366d1ac7a24d9ab4690bd04576dc772ddf8321` | six variants absent |
+| find-docs | https://github.com/upstash/context7 | public source commit `9a384f099011d6299df530fd8d7a22510b2004d5` matched to installed Context7 CLI instructions | MIT repository license; license-evidence revision `9a384f099011d6299df530fd8d7a22510b2004d5` | `third_party_licenses/upstash--context7/LICENSE` — `85cfb556dc2b22b55d2565674fcdaac82f3f2f6b7a928d27003132721bb6736c` | six variants absent |
+| find-skills | https://github.com/vercel-labs/skills | installed folder hash `1c27b1774a4ec17ad4556a72e3c0168beab3af0183b2c1b8aa9e320af3ff41ce` | MIT repository license; license-evidence revision `435076e78988e1e6ec40d00b0b1d76bdbbc5419a` | `third_party_licenses/vercel-labs--skills/LICENSE` — `661142e53c313d2bb5e1b055f5c0a39001450ff1b5e27b89dc4bc7de9a6352ca` | six variants absent |
+| grill-me | https://github.com/mattpocock/skills | installed folder hash `c817f6f36acd483294144694a935a76d3e3eb101` | MIT repository license; license-evidence revision `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | `third_party_licenses/mattpocock--skills/LICENSE` — `0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5` | six variants absent |
+| grilling | https://github.com/mattpocock/skills | installed folder hash `10b0db61f9b3869243db8a1a0ee84f862139b94e` | MIT repository license; license-evidence revision `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76` | `third_party_licenses/mattpocock--skills/LICENSE` — `0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5` | six variants absent |
+| n8n-workflow-patterns | https://github.com/czlonkowski/n8n-skills | installed folder hash `8a0d91d74d47774f95acec885186e9506597263c` | MIT repository license plus upstream notices; license-evidence revision `02965226846ad6aca0fdead94765db3cad1fca95` | `third_party_licenses/czlonkowski--n8n-skills/LICENSE` — `b03a339fb8660cceec76a78a566fc12eadf2db5a1fb7d1a48e3b5b77989afa07`; `third_party_licenses/czlonkowski--n8n-skills/NOTICES` — `26a668e1b43e7a8b9acea34e9cc17de71b3f239ebe74ddce3a0522f2d3a9d429` | pinned `NOTICES` artifact is included; other five variants absent |
+| ru-text | https://github.com/talkstream/ru-text | source revision from shipped homepage `b13623e964ceae20902b09469cd538a637b5a5fa`; exact installed snapshot fixed by BACKUP_SNAPSHOT.tsv | MIT repository license; license-evidence revision `b13623e964ceae20902b09469cd538a637b5a5fa` | `third_party_licenses/talkstream--ru-text/LICENSE` — `37ea601e35a544e6a4b08b1c5cb126543b2ea6dc14b23620f12bdc11a00ba839` | six variants absent |
+| supabase-postgres-best-practices | https://github.com/supabase/agent-skills | installed folder hash `27bde25111c4cd5e6f803fc9db5fbffe27bb26cf` | MIT repository license and copied frontmatter; license-evidence revision `8331f910845103c08d51f6ca1d86ebb7d1f745e3` | `third_party_licenses/supabase--agent-skills/LICENSE` — `b65e575eb4f04a13c187d64e958321298e2ab84d67aa8428819f362056ba292c` | six variants absent |
+| synthesis-voice-profiler | https://github.com/synthesisengineering/synthesis-skills | copied skill version `1.0.0`; source revision `e02496f5c3ea74ef43f7a3f84c006ebdc5100b86` | explicit skill-level CC0-1.0; repository-wide Apache-2.0 does not replace it; official version 1.0 text | `third_party_licenses/synthesisengineering--synthesis-skills/CC0-1.0.txt` — `a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499` | not applicable |
+
+`NOTICES` is retained for upstream provenance context; its
+`NOTICES-APACHE-2.0.txt` companion applies to enumerated non-vendored
+hook/router files, not the copied `n8n-workflow-patterns` subtree. No Apache
+content from those hook/router files is vendored here.
+
+`evaluating-agent-skills`, `making-architecture-decisions`, and
+`resolve-ambiguous-tasks` are user-managed local material published by direct
+user request. No implied public reuse license is granted for those three skills.

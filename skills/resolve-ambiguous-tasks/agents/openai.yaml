@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resolve Ambiguous Tasks"
+  short_description: "Turns incomplete tasks into evidence-backed work"
+  default_prompt: "Use $resolve-ambiguous-tasks to turn this incomplete task into a verified research, specification, and execution workflow."
