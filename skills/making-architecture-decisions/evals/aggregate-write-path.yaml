@@ -1,0 +1,124 @@
+decision:
+  question: "Does the revised skill preserve one canonical aggregate writer and remove artifacts of superseded decisions unless verified invariants require them?"
+  candidate: "making-architecture-decisions with aggregate write-path gate"
+  counterfactual: "previous skill version"
+  approved_claim: "On the fixed cases, the candidate traces the write path, rejects or justifies an additional writer using explicit invariants, and cleans up superseded architecture artifacts."
+  prohibited_claims:
+    - "The skill prevents every duplicate writer in arbitrary repositories."
+    - "A single model-graded run proves production reliability."
+  threshold: "All mandatory invariants pass on all cases; no forbidden side effect appears; case aggregate-write-path-002 must still permit the justified writer."
+  error_costs:
+    false_positive: "Unnecessary writer duplicates persistence, events, concurrency behavior, and maintenance ownership."
+    false_negative: "Rejecting a necessary atomic writer can violate correctness under concurrency."
+
+scope:
+  kind: fixed_suite
+  target_population: null
+  sampling_frame: "One observed architecture failure plus hard boundary cases."
+  strata:
+    - existing-canonical-writer
+    - justified-specialized-writer
+    - unknown-ownership
+    - superseded-decision-cleanup
+  weights: null
+
+evidence:
+  tuning_use: "The first case is the observed failure that motivated the revision; the other cases protect against overfitting."
+  decision_set: "Fixed three-case regression suite."
+  sufficiency_rule: "PASS only when every case satisfies its invariants; otherwise FAIL. Use INSUFFICIENT_EVIDENCE when the run lacks an observable architecture recommendation."
+
+cases:
+  - id: aggregate-write-path-001
+    input: |
+      A service receives raw pricing fields from an external scoring response. Existing code maps raw scores through an application-type strategy into ResultModel, then one orchestration service persists ResultModel through ApplicationStorage.patch and publishes the aggregate-changed event. A new preapproval rule must choose one of two prices using a segment lookup and an A/B assignment. Design the smallest complete change. Retries must preserve the selected snapshot.
+    should_select: true
+    expected_outcome: "Put preapproval-specific selection in the existing strategy or a value-returning helper called by it, extend ResultModel with the selected facts, and retain the single canonical patch. Preserve snapshot/idempotency explicitly."
+    mandatory_invariants:
+      - "Traces source -> strategy -> ResultModel -> canonical patch -> aggregate-changed event."
+      - "Names the orchestration/storage path as the canonical writer."
+      - "Keeps the tariff calculator free of persistence and event-publication side effects."
+      - "Explains how retries preserve the selected snapshot."
+    forbidden_side_effects:
+      - "Adds a feature-specific save method for the same aggregate without a verified invariant."
+      - "Publishes the aggregate-changed event from a second path."
+    reference_solution: "The result model can carry price, price type, and reference rate, so no second writer is required."
+    tags: [architecture, aggregate, single-writer, strategy, observed-regression]
+    grader_ids: [aggregate-write-path-rubric-v1]
+
+  - id: aggregate-write-path-002
+    input: |
+      An existing generic patch reads and writes an aggregate but provides no compare-and-set or row lock. A worker must atomically claim one unclaimed item so two workers can never process it. The database supports one conditional UPDATE ... WHERE claimed_at IS NULL returning the claimed row. Decide whether a specialized repository method is justified.
+    should_select: true
+    expected_outcome: "Permit a bounded atomic claim method because the verified concurrency invariant cannot be protected by the generic patch; keep subsequent ordinary updates on the canonical path."
+    mandatory_invariants:
+      - "Names exclusive claiming as the verified invariant."
+      - "Explains why the generic read-then-patch path is insufficient."
+      - "Bounds the new writer to the atomic claim lifecycle event."
+    forbidden_side_effects:
+      - "Rejects the specialized method solely because a generic writer exists."
+      - "Turns the claim method into a general alternative patch API."
+    reference_solution: "A specialized conditional update is the lowest sufficient intervention for the atomic claim."
+    tags: [architecture, concurrency, justified-writer, hard-negative]
+    grader_ids: [aggregate-write-path-rubric-v1]
+
+  - id: aggregate-write-path-003
+    input: |
+      A change requires persisting a new aggregate field, but available evidence shows several storage classes and does not establish which lifecycle owns the aggregate or which path publishes its domain event. Produce the architecture recommendation now.
+    should_select: true
+    expected_outcome: "Return readiness blocked and request one bounded trace of the current source-to-writer path before selecting placement or adding persistence."
+    mandatory_invariants:
+      - "Marks writer and lifecycle ownership as unknown."
+      - "Does not recommend a provisional writer."
+      - "Names one next research action: trace current callers and event publication."
+    forbidden_side_effects:
+      - "Chooses the nearest storage class by naming convention."
+      - "Adds a compatibility or duplicate write path as a precaution."
+    reference_solution: "Ownership is a material decision hinge, so synthesis is blocked pending a bounded write-path trace."
+    tags: [architecture, readiness, unknown-ownership]
+    grader_ids: [aggregate-write-path-rubric-v1]
+
+  - id: aggregate-write-path-004
+    input: |
+      An earlier design introduced a database table, repository, writer, lookup API, feature flag, fixtures, and tests to persist an assignment across requests. The accepted final design now derives the required type during an existing processing flow, stores that final type in the aggregate through its canonical patch, and has no cross-event lookup requirement. The earlier table migration exists only on the unmerged feature branch. Revise the architecture and implementation scope.
+    should_select: true
+    expected_outcome: "Adopt the in-flow calculation and single canonical patch, inventory every artifact of the superseded persisted-assignment design, and remove the branch-local table, migration, repository, writer, lookup API, obsolete flag/fixtures, and intermediate-specification tests unless another current requirement is evidenced."
+    mandatory_invariants:
+      - "Explicitly marks the persisted-assignment design as superseded."
+      - "Classifies its state, migration, code paths, contracts/configuration, and tests as retain, migrate, or remove."
+      - "Removes the unapplied branch-local persistence artifacts because no current invariant needs them."
+      - "Keeps tests focused on the final derived type and canonical aggregate update, not the discarded storage mechanism."
+    forbidden_side_effects:
+      - "Keeps the table or lookup API for possible future reuse."
+      - "Retains tests whose only purpose is to distinguish the final design from an abandoned intermediate implementation."
+      - "Layers the new path over the old writer without an explicit migration boundary and exit condition."
+    reference_solution: "The final design has no cross-event state requirement, so the lowest complete architecture removes all unapplied artifacts that existed only to persist that state."
+    tags: [architecture, cleanup, superseded-decision, target-state-tests]
+    grader_ids: [aggregate-write-path-rubric-v1]
+
+graders:
+  - id_version: aggregate-write-path-rubric-v1
+    dimension: "Canonical aggregate writer and superseded-decision cleanup discipline"
+    evidence_required: true
+    labels_scale:
+      PASS: "All mandatory invariants are evidenced and no forbidden side effect is proposed."
+      FAIL: "Any mandatory invariant is absent, contradicted, or a forbidden side effect is proposed."
+      INSUFFICIENT_EVIDENCE: "The answer does not contain a concrete placement/write-path decision that can be graded."
+    abstention: "Use INSUFFICIENT_EVIDENCE rather than inferring unstated architecture."
+    blind_fields: [candidate, counterfactual]
+    order_handling: "Grade each case independently; candidate identity is hidden."
+    validation: "Case 001 is anchored by the observed duplicate-writer failure; case 002 rejects an absolutist single-writer rule; case 003 checks the readiness gate; case 004 checks cleanup after a decision change."
+    failure_policy: "Manual review of the answer against every mandatory invariant and forbidden side effect."
+
+baseline_observations:
+  - case_id: aggregate-write-path-001
+    variant: counterfactual
+    intervention_mode: natural_selection
+    activation_signal: true
+    observed_failure: "The design introduced a value-selection service that also persisted the aggregate through a feature-specific save method, duplicating the existing patch and event-publication path."
+    provenance: "Observed project implementation and subsequent architecture review; retained as regression evidence rather than an independent decision-set result."
+  - case_id: aggregate-write-path-004
+    variant: counterfactual
+    intervention_mode: natural_selection
+    activation_signal: true
+    observed_failure: "After the architecture changed, artifacts and tests justified only by the superseded design were not systematically reconsidered and removed."
+    provenance: "Observed repeated cleanup need after scope and architecture changes; retained as regression evidence rather than an independent decision-set result."

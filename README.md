@@ -24,6 +24,25 @@
 | [n8n-subworkflows-official](skills/n8n-subworkflows-official/SKILL.md) | Активен | Выделение повторно используемой и многошаговой логики в модульные subworkflow, их именование и обнаружение. |
 | [n8n-workflow-lifecycle-official](skills/n8n-workflow-lifecycle-official/SKILL.md) | Активен | Полный жизненный цикл workflow: проектирование, структура, именование, проверка, тестирование, организация и публикация. |
 | [using-n8n-skills-official](skills/using-n8n-skills-official/SKILL.md) | Активен | Базовый протокол работы с n8n: маршрутизация к профильным навыкам, обзор MCP-инструментов и общие правила. |
+| [architecture-decision-records](skills/architecture-decision-records/SKILL.md) | Активен | Создание и сопровождение архитектурных записей решений (ADR). |
+| [code-review](skills/code-review/SKILL.md) | Активен | Проверка изменений кода на корректность, безопасность и производительность. |
+| [create-rfc](skills/create-rfc/SKILL.md) | Активен | Подготовка структурированных RFC для значимых технических изменений. |
+| [database-schema-designer](skills/database-schema-designer/SKILL.md) | Активен | Проектирование надёжных схем SQL- и NoSQL-баз данных. |
+| [evaluating-agent-skills](skills/evaluating-agent-skills/SKILL.md) | Активен | Проектирование и сопровождение проверок качества агентских навыков. |
+| [find-docs](skills/find-docs/SKILL.md) | Активен | Поиск актуальной документации и примеров для инструментов разработки. |
+| [find-skills](skills/find-skills/SKILL.md) | Активен | Поиск и установка подходящих агентских навыков. |
+| [grill-me](skills/grill-me/SKILL.md) | Активен | Запуск строгого стресс-теста плана, решения или идеи. |
+| [grilling](skills/grilling/SKILL.md) | Активен | Последовательный критический разбор предположений и решений пользователя. |
+| [making-architecture-decisions](skills/making-architecture-decisions/SKILL.md) | Активен | Выбор и пересмотр архитектуры сложных технических решений. |
+| [n8n-workflow-patterns](skills/n8n-workflow-patterns/SKILL.md) | Активен | Применение проверенных архитектурных паттернов для workflow n8n. |
+| [resolve-ambiguous-tasks](skills/resolve-ambiguous-tasks/SKILL.md) | Активен | Исследование неоднозначных задач и фиксация проверяемой спецификации. |
+| [ru-text](skills/ru-text/SKILL.md) | Активен | Редактура русскоязычных текстов, типографика и UX-формулировки. |
+| [supabase-postgres-best-practices](skills/supabase-postgres-best-practices/SKILL.md) | Активен | Практики проектирования, безопасности и производительности PostgreSQL. |
+| [synthesis-voice-profiler](skills/synthesis-voice-profiler/SKILL.md) | Активен | Анализ авторского голоса и создание воспроизводимого стилевого профиля. |
+
+| [eli5](skills/eli5/SKILL.md) | Активен | Простое и наглядное объяснение сложных тем на уровне пятилетнего ребёнка. |
+
+| [preparing-openspec-context](skills/preparing-openspec-context/SKILL.md) | Активен | Подготовка и проверка контекста перед созданием OpenSpec change, proposal, design, spec или tasks при неполных, неоднозначных или устаревших исходных данных. |
 
 ## Структура
 
