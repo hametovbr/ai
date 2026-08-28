@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prepare OpenSpec Context"
+  short_description: "Verify context before OpenSpec authoring"
+  default_prompt: "Use $preparing-openspec-context to build and review an evidence-backed readiness pack before writing OpenSpec artifacts."
+
+policy:
+  allow_implicit_invocation: true
