@@ -1,6 +1,0 @@
-interface:
-  display_name: "Architecture Decisions"
-  short_description: "Choose the simplest justified architecture"
-  default_prompt: "Use $making-architecture-decisions before designing or implementing this solution, and recommend the smallest justified architecture."
-policy:
-  allow_implicit_invocation: true
