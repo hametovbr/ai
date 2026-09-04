@@ -6,6 +6,7 @@
 
 | Навык | Статус | Назначение |
 |---|---|---|
+| [orchestrating-openspec-luna](skills/orchestrating-openspec-luna/SKILL.md) | Активен | Исполнение готового OpenSpec change через Luna Max: декомпозиция, зависимости, контроль, проверки и восстановление работы. |
 | [making-pragmatic-architecture-decisions](skills/making-pragmatic-architecture-decisions/SKILL.md) | Активен | Выбор и пересмотр границ программной системы: размещение поведения и состояния, конфигурация или код, форма расширения, интеграция, развёртывание, миграция, владение и build-versus-buy. |
 | [fileflows-flow-authoring](skills/fileflows-flow-authoring/SKILL.md) | Активен | Создание и проверка импортируемых FileFlows flow JSON, подбор узлов, JavaScript/C#-логика, FFmpeg, Docker-пути и интеграция с Sonarr/Radarr. |
 | [gathering-architecture-context](skills/gathering-architecture-context/SKILL.md) | Активен | Сбор и проверка недостающих, спорных или устаревших фактов о текущей системе перед решениями, влияющими на границы, сохранность данных, внешние контракты, миграцию, развёртывание или восстановление. |

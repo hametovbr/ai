@@ -1,0 +1,14 @@
+interface:
+  display_name: 'OpenSpec: оркестрация Luna Max'
+  short_description: Декомпозиция и контроль исполнения OpenSpec через Luna
+  default_prompt: 'Используй $orchestrating-openspec-luna для исполнения готового
+    OpenSpec change: декомпозируй работу, поручай изменения Luna Max и проверяй результаты.'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
