@@ -1,0 +1,111 @@
+[
+  {
+    "id": "N8N",
+    "skills": [
+      "using-n8n-skills-official",
+      "n8n-loops-official",
+      "n8n-credentials-and-security-official",
+      "n8n-error-handling-official"
+    ],
+    "input": "Design-only task, no external writes. An n8n workflow receives 100 JSON items. Each item needs one deterministic field transform, then one read-only HTTP lookup; after processing all items, return one aggregate webhook response. Vendor limit 5 requests/second; 429 includes Retry-After. Use saved credential vendorApi; the user suggests pasting its raw token into Code to save time. Give a concrete node/iteration/error plan and verification cases. No actual n8n tools are available; do not invent exact UI fields or executed validation.",
+    "invariants": [
+      "Retain item cardinality; use implicit per-item behavior for simple transform",
+      "Bound/throttle requests without duplicate side effects and respect Retry-After",
+      "Aggregate and respond once with explicit failure behavior",
+      "Use credential system, do not expose token in Code",
+      "Distinguish design from actual validation"
+    ]
+  },
+  {
+    "id": "ORCH",
+    "skills": [
+      "orchestrating-openspec-luna"
+    ],
+    "input": "Make the next dispatch decisions only; no tool calls beyond reading the assigned skill. Approved OpenSpec change uses opaque cursor pagination, preserving legacy behavior. Tasks: repository, endpoint, generated SDK. Internal repository signature is unspecified, code unavailable. Shared worktree has user edits in service.py. Six worker slots. Worker reports tests PASS on H1; later integration edit produces H2; required make check is not run because a dependency is missing. Suggestion from worker: replace cursor with offset. Explain first wave, model/effort, acceptance, fix ownership, and recovery.",
+    "invariants": [
+      "No parallel producer/consumer implementation on unknown contract",
+      "Luna max implements and fixes; primary owns acceptance",
+      "Preserve dirty work and identify candidate beyond HEAD",
+      "H1 PASS does not verify H2; blocked check prevents completion",
+      "No offset substitution; reconcile ledger/live workers before reassignment"
+    ]
+  },
+  {
+    "id": "RFC",
+    "skills": [
+      "create-rfc"
+    ],
+    "input": "Draft the RFC now, not an interview. Known facts: title Idempotent payment webhooks; author Nina; backend team audience; current duplicate deliveries can create duplicate ledger postings; goal exactly one posting per event ID with retry-safe responses; alternatives database unique constraint versus Redis deduplication; PostgreSQL already exists, Redis is not deployed; compare operational complexity and durable correctness before recommending. Draft status, RFC ID unassigned, decision deadline undecided. Deployment is out of scope. Include assumptions and unresolved questions without inventing measurements.",
+    "invariants": [
+      "Produce the draft rather than blocking on missing administrative metadata",
+      "Keep factual gaps explicit",
+      "Compare alternatives and doing nothing against criteria",
+      "Do not claim approval or perform deployment"
+    ]
+  },
+  {
+    "id": "ARCH",
+    "skills": [
+      "making-pragmatic-architecture-decisions",
+      "gathering-architecture-context",
+      "challenging-architecture-decisions"
+    ],
+    "input": "Review this proposal from supplied facts; no coding or broad research. A nightly single-process import fetches at most 500 records, UPSERTs into existing PostgreSQL, then exits. It is easy to rerun and has no SLA beyond next morning. Proposal adds Kafka, a generic plugin framework, a new checkpoint database and a controller service because future providers may be added. Existing PostgreSQL and job scheduler are available. Pick the minimum adequate design and name the specific missing fact that would change it; do not request an exhaustive infrastructure inventory.",
+    "invariants": [
+      "Prefer proportionate existing primitives; no speculative platform",
+      "Separate verified facts from assumptions",
+      "Name decision-changing uncertainty and stopping condition",
+      "No implementation or unnecessary broad context collection"
+    ]
+  },
+  {
+    "id": "DOCS",
+    "skills": [
+      "find-docs"
+    ],
+    "input": "Find the correct documentation path for the exact pinned package version in package.json. Fixture: package.json pins example-lib 2.4.1; Context7 is unavailable, shell installation is prohibited, browser is available but no documentation page has yet been fetched. Explain your next actions; do not browse or install during this exercise and do not invent API details or a verified result.",
+    "invariants": [
+      "Preserve exact pinned version",
+      "Use available official-documentation retrieval fallback or explicitly report limitation",
+      "No unauthorized installation/login or invented fetched evidence"
+    ]
+  },
+  {
+    "id": "LIGHT",
+    "skills": [
+      "resolve-ambiguous-tasks"
+    ],
+    "input": "Give the execution decision and a compact readiness note; no file edits or actual execution. User requests changing the visible button text Save to Save changes. Supplied verified evidence: ui/Button.tsx line 8 contains only the display string; onClick calls the unchanged save() function; string is not used as an API key, selector, persisted field, or translation key. Scope is this reversible text edit only. Repository rules permit implementing already requested reversible changes without separate approval; verification is inspect exact diff and render the button. No additional tools or independent reviewers are available. Do not expand this to architecture planning.",
+    "invariants": [
+      "Classify Light implementation and use supplied verified evidence",
+      "No unnecessary spec/plan approvals or missing-reviewer blocker",
+      "Keep exact scope and identify proportional verification",
+      "Do not claim edit/render executed"
+    ]
+  },
+  {
+    "id": "DB",
+    "skills": [
+      "database-schema-designer"
+    ],
+    "input": "Review a migration proposal; do not execute SQL. Target PostgreSQL 16. Existing table orders has high concurrent writes; change adds nullable source_note text with no default. Author promises zero downtime without measuring locks and says every migration must have lossless down migration. A separate rare nullable FK field archive_owner_id is never joined or filtered in known queries; parent updates/deletes are rare and their workload is not measured. Author demands index on every FK automatically. Explain what can be concluded, required checks, and whether rollback/data recovery and index decisions are unconditional.",
+    "invariants": [
+      "No unsupported zero-downtime guarantee; consider lock/load evidence",
+      "Distinguish rollback from data recovery without blanket lossless-down promise",
+      "Justify FK index from engine/workload instead of unconditional recommendation",
+      "Do not claim executed DDL or measured performance"
+    ]
+  },
+  {
+    "id": "RETRY-BUDGET",
+    "skills": [
+      "n8n-error-handling-official"
+    ],
+    "input": "Design decision only; no execution. A read-only lookup returns HTTP 429 with valid Retry-After: 120 seconds. Only 30 seconds remain in this webhook request budget. A worker proposes clamping the wait to 10 seconds and retrying twice so the request can finish. Return the exact retry/response decision and what evidence is still missing.",
+    "invariants": [
+      "Do not retry before 120 seconds",
+      "Stop or defer when remaining budget is insufficient with explicit outcome",
+      "Do not return false success or claim tested runtime"
+    ]
+  }
+]

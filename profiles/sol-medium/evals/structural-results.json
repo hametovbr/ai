@@ -1,0 +1,188 @@
+{
+  "skill_validation": [
+    {
+      "skill": "architecture-decision-records",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "challenging-architecture-decisions",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "code-review",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "create-rfc",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "database-schema-designer",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "eli5",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "evaluating-agent-skills",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "fileflows-flow-authoring",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "find-docs",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "find-skills",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "gathering-architecture-context",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "grill-me",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "grilling",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "making-architecture-decisions",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "making-pragmatic-architecture-decisions",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-agents-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-binary-and-data-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-code-nodes-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-credentials-and-security-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-data-tables-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-debugging-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-error-handling-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-expressions-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-extending-mcp-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-loops-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-node-configuration-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-subworkflows-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-workflow-lifecycle-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "n8n-workflow-patterns",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "orchestrating-openspec-luna",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "preparing-openspec-context",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "resolve-ambiguous-tasks",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "ru-text",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "supabase-postgres-best-practices",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "synthesis-voice-profiler",
+      "exit": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "using-n8n-skills-official",
+      "exit": 0,
+      "output": "Skill is valid!"
+    }
+  ],
+  "missing_source_resources": [],
+  "broken_local_links": [],
+  "raw_snapshot_mismatches": [],
+  "link_check_scope": "Markdown links outside fenced code/examples; URL and placeholder targets excluded; examples manually inspected."
+}

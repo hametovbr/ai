@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Security (Official)
+  short_description: Configure credentials and secure access
+  default_prompt: Use $n8n-credentials-and-security-official to secure credentials
+    and authentication in this workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "light-ready",
+    "expected_exit": 0,
+    "baseline": {
+      "exit": 0,
+      "output": "OK: validated 1 file(s), 0 definition(s), 0 reference(s)\n"
+    },
+    "candidate": {
+      "exit": 0,
+      "output": "OK: validated 1 file(s), 0 definition(s), 0 reference(s)\n"
+    }
+  },
+  {
+    "id": "named-action-placeholder",
+    "expected_exit": 1,
+    "baseline": {
+      "exit": 0,
+      "output": "OK: validated 1 file(s), 0 definition(s), 0 reference(s)\n"
+    },
+    "candidate": {
+      "exit": 1,
+      "output": "ERROR: artifact.md:4: unresolved placeholder\nFAILED: 1 issue(s)\n"
+    }
+  },
+  {
+    "id": "open-material-unknown",
+    "expected_exit": 1,
+    "baseline": {
+      "exit": 1,
+      "output": "ERROR: artifact.md:2: readiness contradiction: READY with an open material unknown\nFAILED: 1 issue(s)\n"
+    },
+    "candidate": {
+      "exit": 1,
+      "output": "ERROR: artifact.md:2: readiness contradiction: READY with an open material unknown\nFAILED: 1 issue(s)\n"
+    }
+  },
+  {
+    "id": "undefined-evidence",
+    "expected_exit": 1,
+    "baseline": {
+      "exit": 1,
+      "output": "ERROR: artifact.md:2: undefined reference E-001\nFAILED: 1 issue(s)\n"
+    },
+    "candidate": {
+      "exit": 1,
+      "output": "ERROR: artifact.md:2: undefined reference E-001\nFAILED: 1 issue(s)\n"
+    }
+  }
+]

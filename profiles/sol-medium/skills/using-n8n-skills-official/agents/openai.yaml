@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Skills Router (Official)
+  short_description: Route every n8n task to expert guidance
+  default_prompt: Use $using-n8n-skills-official to route this n8n task through the
+    correct official guidance.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

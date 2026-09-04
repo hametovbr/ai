@@ -1,0 +1,22 @@
+[
+  {
+    "id": "light-ready",
+    "text": "Mode: implementation\nRigor: Light\nReadiness: READY\nScope: Change display text only.\nNext action: Inspect the exact diff and render the button.\n",
+    "expected_exit": 0
+  },
+  {
+    "id": "named-action-placeholder",
+    "text": "Mode: implementation\nRigor: Light\nReadiness: READY\nNext action: {named action}\n",
+    "expected_exit": 1
+  },
+  {
+    "id": "open-material-unknown",
+    "text": "Readiness: READY\n- [U-001] Meaning unknown; Status: OPEN; Material: yes\n",
+    "expected_exit": 1
+  },
+  {
+    "id": "undefined-evidence",
+    "text": "Readiness: READY\nClaim relies on (E-001).\n",
+    "expected_exit": 1
+  }
+]

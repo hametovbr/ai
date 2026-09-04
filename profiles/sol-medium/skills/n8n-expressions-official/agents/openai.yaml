@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Expressions (Official)
+  short_description: Write correct n8n expressions
+  default_prompt: Use $n8n-expressions-official to write or debug the expressions
+    in this workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

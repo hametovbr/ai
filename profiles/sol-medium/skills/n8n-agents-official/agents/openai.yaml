@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Agents (Official)
+  short_description: Build reliable n8n AI-agent workflows
+  default_prompt: Use $n8n-agents-official to design and validate this n8n AI-agent
+    workflow.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

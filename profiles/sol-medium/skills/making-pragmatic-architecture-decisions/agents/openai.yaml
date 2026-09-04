@@ -1,0 +1,14 @@
+interface:
+  display_name: Pragmatic Architecture Design
+  short_description: Minimal software-boundary decisions
+  default_prompt: Use $making-pragmatic-architecture-decisions to choose the smallest
+    sufficient system boundary for this problem.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

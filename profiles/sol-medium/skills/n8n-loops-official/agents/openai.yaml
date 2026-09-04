@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Loops (Official)
+  short_description: Design loops, batches, and pagination
+  default_prompt: Use $n8n-loops-official to implement loops, batching, or API pagination
+    safely.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

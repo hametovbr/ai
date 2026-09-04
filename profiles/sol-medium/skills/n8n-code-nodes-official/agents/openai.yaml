@@ -1,0 +1,14 @@
+interface:
+  display_name: n8n Code Nodes (Official)
+  short_description: Write safe n8n Code node logic
+  default_prompt: Use $n8n-code-nodes-official to implement or review this n8n Code
+    node.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

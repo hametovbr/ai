@@ -1,0 +1,14 @@
+interface:
+  display_name: FileFlows Flow Authoring
+  short_description: Create and validate FileFlows flow JSON
+  default_prompt: Use $fileflows-flow-authoring to create an importable FileFlows
+    flow JSON.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

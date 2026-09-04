@@ -1,0 +1,37 @@
+{
+  "decision": "Accept profile structure/portability changes only if sampled behavior preserves mandatory invariants; do not infer general model gains.",
+  "mode": "forced-loaded conditional behavior",
+  "target_model_requested": "gpt-5.6-sol",
+  "reasoning_effort_requested": "medium",
+  "fork_turns": "none",
+  "runtime": "ChatGPT Work collaboration.spawn_agent; provider-resolved model snapshot not exposed",
+  "source_commit": "a1002b8de222ee8d34f8fbf56dccb017fc11f796",
+  "candidate_identity": "../PROFILE_SNAPSHOT.tsv; final skill files are hashed there",
+  "environment": "Read assigned skill and linked files; no live service calls, implementation, secrets, or production effects. Write only assigned response artifact.",
+  "budget": "450 words per case; retry-budget case 250 words; no custom temperature/seed exposed.",
+  "groups": {
+    "ops": [
+      "N8N",
+      "ORCH"
+    ],
+    "general": [
+      "RFC",
+      "ARCH",
+      "DOCS"
+    ],
+    "boundaries": [
+      "LIGHT",
+      "DB"
+    ]
+  },
+  "repetitions": "One baseline and one candidate response per case. Ops candidate repeated once after retry-budget clarification; initial candidate retained.",
+  "grading": "Primary agent manually inspected supplied cases and actual responses against listed invariants; no independent human or calibrated model judge.",
+  "selection_signal": "Unavailable; skills explicitly assigned. No discovery/selection claim.",
+  "tuning": "Original seven cases used as low-risk validation-as-decision. N8N cap ambiguity informed a disclosed refinement and final rerun; RETRY-BUDGET is an added regression probe, not held-out evidence.",
+  "limitations": [
+    "Case groups share thread context within each variant; cases/trials are not independent population samples.",
+    "No live n8n, project integration, browser retrieval, database load, or installation-discovery testing.",
+    "No speed/token/cost measurements or proof of broad Sol-medium superiority.",
+    "Top-level runtime and user constraints may override weak original instructions; baseline success is reported as such."
+  ]
+}
