@@ -1,6 +1,6 @@
 # Verified Context Pack Contract
 
-Use this structure for the terminal artifact produced before OpenSpec authoring. Preserve stable IDs from `resolve-ambiguous-tasks` where its artifacts already exist. Omit empty optional rows, but never omit a material gap.
+Use the full structure for High-rigor preparation. At Standard, combine fields into compact ledgers; at Light, use one compact note with scope, current revision/evidence, verified target, observable completion, sufficient check, dependencies/non-goals, material gaps, direct review and approval status. Preserve the same evidence and task-admissibility meaning without requiring all headings, empty coverage rows or separate artifacts. Escalate on material risk. Preserve stable IDs from `resolve-ambiguous-tasks` where already used.
 
 ## 1. Header
 
@@ -56,7 +56,7 @@ Record what exists now, not the requested future narrative:
 | Privacy/security | | | |
 | Ownership and delivery | | | |
 
-Mark irrelevant surfaces with a reason; do not silently skip them.
+For the full pack, mark irrelevant surfaces with a reason. Compact packs cover relevant surfaces and explicitly record material gaps.
 
 ## 5. Evidence and Claims
 
@@ -88,7 +88,7 @@ Required for claims containing or implying complete coverage, default behavior, 
 
 ## 9. Requirement Candidates
 
-These are research handoff entries, not normative OpenSpec requirements.
+These are research handoff entries, not normative OpenSpec requirements. Separate required outcomes/contracts from suggested local implementation methods; no suggestion silently becomes a binding requirement.
 
 | Candidate | Supported behavior boundary | Basis claims/decisions | Current owner | Acceptance boundary | Status |
 |---|---|---|---|---|---|
@@ -101,6 +101,8 @@ Do not phrase blocked rows as implementation instructions. They expose internall
 | Candidate | Requirement | Evidence | Current owner/change target | Observable completion | Verification | Dependencies/order | Non-goals | Status |
 |---|---|---|---|---|---|---|---|---|
 | TC-... | RQ-... | E-..., C-... | exact current seam | | exact test/check | | | ADMISSIBLE / BLOCKED |
+
+In Verification, name the behavior/risk, exact sufficient test/check and rerun trigger. An extra expensive run or new test infrastructure requires a concrete gap that cheaper existing checks do not cover. Include these decisions in the authoring handoff, not only the conversation.
 
 A row is `ADMISSIBLE` only when every cell is supported. An unknown target, speculative file/symbol, vague “add tests”, or undiscovered dependency makes it `BLOCKED`.
 
@@ -118,10 +120,11 @@ For each material item include:
 
 ## 12. Independent Review
 
+Record the review required by rigor/project policy: Light direct scope/evidence check; Standard combined independent research/readiness audit when a material decision or contested evidence warrants it (otherwise direct check and rationale); High separate isolated research/readiness audits.
+
 Record:
 
-- research-review findings;
-- readiness-review findings;
+- applicable review findings;
 - accepted/rejected/deferred status with rationale and evidence;
 - claims or decisions reopened by review.
 
@@ -139,7 +142,7 @@ The researcher may not silently mark their own pack ready after a material revie
 - [ ] User decisions are feasible and active/superseded states propagated.
 - [ ] Every material requirement candidate has a current owner and acceptance boundary.
 - [ ] Every future task candidate is `ADMISSIBLE`.
-- [ ] Independent research and redacted readiness reviews have no unresolved material finding; unavailable compatible review is an open blocker.
+- [ ] Reviews required by rigor/project policy have no unresolved material finding; unavailable required independent review is an open blocker. Light direct checks need no isolated reviewer.
 - [ ] A current deterministic workflow-artifact validation run passes, including for an upstream pack.
 - [ ] The user explicitly approved this context pack.
 
@@ -154,7 +157,7 @@ If every item passes, return `READY` and hand off:
 
 The subsequent OpenSpec authoring process converts this handoff into repository-native artifacts. It must not invent missing owners, files, symbols, requirements, or tasks.
 
-For the isolated readiness audit, create a redacted reviewer packet containing sections 1–11 plus this contract and the directly referenced evidence/locators. Set the header readiness value to `UNDER_REVIEW`; exclude sections 12–13 and every author/research-review verdict. Add review findings and the final readiness decision to the master pack only during reconciliation.
+When an isolated audit is required, provide the applicable content from sections 1–11 (or the compact equivalent), this contract and directly referenced evidence/locators. Set the header readiness value to `UNDER_REVIEW`; exclude sections 12–13 and every author/research-review verdict. Add review findings and the final readiness decision to the master pack only during reconciliation.
 
 ### PARTIAL or NOT_READY output
 

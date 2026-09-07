@@ -57,12 +57,14 @@ A specification audit is required only when a specification is required by risk,
 
 > Audit this specification against the evidence-ready research pack. Look for missing scope boundaries, actors, invariants, error paths, compatibility constraints, nonfunctional requirements, observability, rollout/rollback, and testable acceptance criteria. Do not redesign unless a finding requires a minimal correction.
 
+For plan reviews, identify duplicate/superseded tasks and checks whose cost has no distinct acceptance benefit. Preserve required behavior and project gates; omit optional additions with no concrete risk or requirement.
+
 ## Reconciliation Loop
 
 1. Primary agent classifies every finding as accepted, rejected-with-evidence, or deferred-with-owner.
 2. Update artifacts and invalidate dependent claims/decisions when needed.
 3. Ask the user only about material preference, authority, or acceptance questions that evidence cannot answer.
 4. Re-run a required review only when changed material affects its verdict.
-5. Stop after no material findings or three cycles. At three unresolved cycles, report the disagreement and request a user decision; do not silently average conclusions.
+5. Stop when no material finding remains. Reopen settled decisions only for new material evidence, changed requirements or a concrete defect, including security defects. At three unresolved cycles, diagnose the specific disagreement; ask the user only for a user-owned decision, otherwise report the evidence blocker. A cycle limit does not justify repeating an unchanged review.
 
 Before a readiness gate, run the claim-to-source audit even if a critic found no issue. For Light work this is the direct review; at Standard or High it complements any required independent review.

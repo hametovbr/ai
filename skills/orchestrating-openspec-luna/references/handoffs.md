@@ -14,9 +14,12 @@ Workspace: <absolute path>; base: <commit + dirty snapshot if any>.
 Accepted prerequisites: <IDs + relevant fixed interfaces/output versions>.
 Read first: <applicable AGENTS/local skills; selected code/test entry points>.
 May edit: <paths/precise ownership>; must preserve: <baseline/user work>.
-Contract: <inputs, outputs, errors, compatibility/invariants from approved sources>.
+Contract: <binding inputs, outputs, errors, compatibility/invariants and project gates>.
+Method: <suggested local approach; permitted equivalent choices within the contract>.
 Acceptance: <observable cases including material edge/error paths>.
-Checks: <exact commands, cwd, required resources; baseline known failures>.
+Checks: <behavior/risk -> sufficient command, cwd, resources; known baseline failures>.
+Rerun: <affected code/dependency/build/config/environment triggers; reason for costly checks>.
+Retry: classify failures; state correction or diagnostic purpose before an expensive repeat.
 Coordination: <shared resources, permitted Git actions, report path>.
 Stop and report: missing contract, out-of-scope file/decision, unexpected user
 changes, unverifiable baseline, or unavailable required check.

@@ -116,6 +116,8 @@ Use `making-architecture-decisions` when the specification selects or changes su
 
 When the work warrants a formal implementation plan, map every `R-###` to tasks, files/components, tests, verification commands, and applicable rollout checks. Add an approval checkpoint only for a governing workflow or a consequential, irreversible, or externally mutating action that is not already authorized. No requirement may disappear between specification and plan. Execution records evidence of verification and preserves deviations as new decisions.
 
+Separate binding outcomes, contracts, invariants and project gates from suggested implementation methods. Allow equivalent cheaper local methods within those constraints; changes to public semantics, ownership, migration strategy or acceptance return to planning. For each planned check, state the behavior/risk, sufficient existing check and rerun trigger. Justify additional expensive checks or new test infrastructure by a concrete coverage gap. Put applicable rerun/diagnosis rules in the plan or linked authoritative contract so execution does not depend on chat history. Keep one concise mapping; reference existing evidence instead of duplicating reports.
+
 ## Compact Example
 
 An initial “rename a UI label” request is Light. Discovery that the same term is an API field escalates rigor, invalidates the UI-only scope claim, and reopens compatibility research. The known UI location remains valid evidence; it is not discarded. Implementation waits until compatibility evidence supports a clear acceptance boundary; require a specification, plan, or additional approval only when the resulting risk or governing workflow calls for one.
