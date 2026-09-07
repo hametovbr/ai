@@ -9,7 +9,7 @@
 
 ## Isolation Rule
 
-Use a fresh subagent. Provide only:
+For independent reviews required by the selected rigor, use a fresh subagent. Light direct checks need no reviewer. Provide only:
 
 1. the artifact being reviewed;
 2. the contract/rubric it must satisfy;
@@ -28,7 +28,7 @@ The reviewer returns findings, not a replacement artifact. Each finding contains
 | Specification audit | Approved research pack, draft specification | Missing boundaries, requirements, failure modes, acceptance criteria, rollout/rollback issues |
 | Plan audit | Approved specification, implementation plan | Unmapped requirements, unsafe ordering, missing verification, unclear checkpoints |
 
-Source-map critique is required only at High rigor or when discovery is expensive/sensitive. Research audit is required for Standard and High. Specification audit is required before final specification approval. Plan review may be satisfied by the planning/execution skill when it uses an independent reviewer with the same isolation rule.
+Apply review stages proportionally. Light uses a direct scope and claim-to-source check. Standard uses one independent audit when a material decision or contested evidence warrants it; otherwise record the direct check and rationale. High requires source-map critique before expensive/sensitive discovery and isolated research and readiness reviews. Audit formal specifications/plans at the selected rigor; a planning/execution skill may satisfy an independent gate using the same isolation rule. Repository-mandated reviews remain binding. Review does not itself introduce approval checkpoints.
 
 ## Reviewer Packets
 
@@ -44,13 +44,15 @@ Source-map critique is required only at High rigor or when discovery is expensiv
 
 > Audit this specification against the approved research pack. Look for missing scope boundaries, actors, invariants, error paths, compatibility constraints, nonfunctional requirements, observability, rollout/rollback, and testable acceptance criteria. Do not redesign unless a finding requires a minimal correction.
 
+For plan reviews, identify duplicate/superseded tasks and checks whose cost has no distinct acceptance benefit. Preserve required behavior and project gates; omit optional additions with no concrete risk or requirement.
+
 ## Reconciliation Loop
 
 1. Primary agent classifies every finding as accepted, rejected-with-evidence, or deferred-with-owner.
 2. Update artifacts and invalidate dependent claims/decisions when needed.
 3. Ask the user only about material preference, authority, or acceptance questions that evidence cannot answer.
-4. Re-run the same review on changed material.
-5. Stop after no material findings or three cycles. At three unresolved cycles, report the disagreement and request a user decision; do not silently average conclusions.
+4. Re-run a required review only when changed material affects its verdict.
+5. Stop when no material finding remains. Reopen settled decisions only for new material evidence, changed requirements or a concrete defect, including security defects. At three unresolved cycles, diagnose the specific disagreement; ask the user only for a user-owned decision, otherwise report the evidence blocker. A cycle limit does not justify repeating an unchanged review.
 
-Before a gate, run the claim-to-source audit even if a critic found no issue. Independence and citation coverage test different failure modes.
+Before a gate, check claim-to-source coverage. For Light this is the direct check; for higher rigor it complements required independent review.
 

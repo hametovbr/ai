@@ -1,5 +1,7 @@
 # Sol medium behavioral and structural checks
 
+Historical results for the original profile. Its exact skill hashes remain in the [snapshot at 59eb3938](https://github.com/hametovbr/ai/blob/59eb3938fe529179f3da3871ab6744b24a1308d9/profiles/sol-medium/PROFILE_SNAPSHOT.tsv). The current snapshot includes later changes; see [planning-rules-review.md](planning-rules-review.md) for their separate, limited checks.
+
 ## Decision and scope
 
 Accept the profile as a reviewed instruction adaptation with bounded regression

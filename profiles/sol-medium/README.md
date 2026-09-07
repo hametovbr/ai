@@ -11,8 +11,7 @@ Use the complete desired directories under `profiles/sol-medium/skills/` as the
 skill source. Keep each skill's references, scripts, assets and metadata together.
 Install **one version per skill name** in an agent's discovery path: choose either
 the original backup or this profile, not both. Repository-wide recursive discovery
-must exclude the unselected tree. No skills in your installed ChatGPT collection
-are replaced by this repository update.
+must exclude the unselected tree. This profile is not installed automatically by a repository update. The planning-rules maintenance also updated the editable personal copies of `challenging-architecture-decisions` and `orchestrating-openspec-luna` with the raw-skill changes; it did not switch installed skills to this profile.
 
 For OpenSpec execution, use `orchestrating-openspec-luna` after the plan is ready.
 The primary agent is Sol medium; implementation/fixes remain explicitly assigned
@@ -29,14 +28,14 @@ questions. Prefer available tools and explicit capability gaps over assumed CLI
 or connector availability.
 
 These are task-specific instruction changes, not proven model-wide improvements.
-See [ANALYSIS.md](ANALYSIS.md) for every skill's disposition and
+The later planning-rules check is documented separately in [evals/planning-rules-review.md](evals/planning-rules-review.md); earlier model-specific results do not automatically validate revised instructions. See [ANALYSIS.md](ANALYSIS.md) for every skill's disposition and
 [evals/RESULTS.md](evals/RESULTS.md) for the limited behavioral evidence.
 
 ## Source and refresh policy
 
 The raw source is `skills/` at commit
 `a1002b8de222ee8d34f8fbf56dccb017fc11f796` (which adds the OpenSpec orchestration
-backup). `SOURCE_SNAPSHOT.tsv` records raw source paths and SHA-256 hashes;
+backup). The four planning/research/execution skills were explicitly refreshed with their raw sources in the 2026-09-07 planning-rules maintenance; other source rows retain that original baseline. `SOURCE_SNAPSHOT.tsv` records the reviewed raw source paths and SHA-256 hashes;
 `PROFILE_SNAPSHOT.tsv` records this profile's skill files. The original dated
 `BACKUP_SNAPSHOT.tsv` remains historical and is not regenerated.
 

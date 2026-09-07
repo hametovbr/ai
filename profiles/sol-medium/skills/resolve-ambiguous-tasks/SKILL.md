@@ -17,6 +17,8 @@ Record the terminal **Mode**: `research-only`, `decision`, `implementation`, or 
 
 Mode describes the requested outcome, not the next safe action. Escalate rigor when discovered risk warrants it; do not impose High-rigor ceremony on Light work.
 
+Assess risk from behavior, data, authority and recovery consequences, not file extension or diff size. A deployment guide can change privileges or production behavior.
+
 ## Workflow
 
 1. Write a compact context contract: requested deliverable, proof target, scope/non-scope, constraints, authority, privacy boundary, known inputs, and material unknowns.
